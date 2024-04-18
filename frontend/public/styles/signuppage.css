@@ -8,7 +8,6 @@ body,
 html {
   margin: 0;
   padding: 0;
-  height: 100%;
   background-color: #4b1e22; /* Set background color */
   display: flex;
   justify-content: center;
@@ -16,6 +15,7 @@ html {
 }
 
 .container {
+  margin: 3.1rem auto;
   background-color: #eee;
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);

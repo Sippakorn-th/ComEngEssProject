@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Maiden+Orange&display=swap");
 
 :root {
-  --purple-color: #7960B3; /* Define a custom color */
+  --purple-color: #7960B3; 
   --brown-color:#4B1E22;
   --grey-color:#EEEEEE;
 }
@@ -19,10 +19,11 @@ body {
   margin: 5rem auto;
 }
 .main-text{
+  margin: 0 auto 2.5rem auto;
+  width: 95%;
   font-size: 6rem;
   text-align: center;
   padding-top: 2rem;
-  margin-bottom: 2.5rem;
 }
 .player-name{
     font-size: 4rem;

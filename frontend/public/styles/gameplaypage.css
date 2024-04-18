@@ -4,6 +4,7 @@
   --purple-color: #7960B3; /* Define a custom color */
   --brown-color:#4B1E22;
   --grey-color:#EEEEEE;
+  --dark-grey-color: #D9D9D9;
 }
 *{
   font-family: "Maiden Orange", sans-serif;
@@ -11,39 +12,58 @@
 body {
   background-color: var(--brown-color);
 }
-
-.out-of-words{
-    padding-top: 2%;
-    padding-right: 2%;
-    text-align: right;
+.avg-guess-player-name{
+  font-size: 2rem;
+  justify-content: space-between;
+  color: white;
+  display: flex;
+  padding: 0 1.5rem;
 }
-
 .container{
   width: 80%;
   height: 530px;
   background-color: var(--grey-color);
-  margin: 5rem auto;
+  margin: 0 auto;
 }
 .main-text{
-  font-size: 4rem;
+  font-size: 6rem;
   text-align: center;
-  padding-top: 2rem;
   margin-bottom: 2.5rem;
 }
-.sub-text{
-    padding-left: 15%;
+.out-of-words{
+  font-size: 3rem;
+  padding-top: 2%;
+  padding-right: 2%;
+  text-align: right;
 }
-.player-name{
-    font-size: 2rem;
-    text-align: right;
-    color: white;
+.form-container{
+  margin: 0 auto;
+  width: 45%;
 }
-.avg-guess{
-    font-size: 2rem;
-    text-align: left;
-    color: white;
+.form-container form label, .result-container{
+  font-size: 2.25rem;
 }
-
+.form-container form input{
+  padding: 1rem;
+  width: 50%;
+  border: none;
+  background-color: var(--dark-grey-color);
+}
+.result-container{
+  display: flex;
+  margin: 0.5rem auto;
+  width: 45%;
+}
+.result-box{
+  background-color: var(--dark-grey-color);
+  width: 50%;
+  font-size: 1rem;
+  color: grey;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  margin-left: 2rem;
+}
 .check-btn{
   background-color: var(--purple-color);
   color: white;
@@ -52,10 +72,10 @@ body {
   border-radius: 0.2rem;
   width: calc(200px + 20vw);
   margin: 2rem auto;
-  font-size: 4rem;
+  font-size: 3rem;
   display: flex;
   justify-content: center;
 }
-.start-game-btn:hover ,.leaderboard-btn:hover{
+.check-btn:hover{
   cursor: pointer;
 }

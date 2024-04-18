@@ -7,14 +7,9 @@
     <link rel="stylesheet" href="../styles/gameplaypage.css" />
 </head>
 <body>
-    <div class="main">
-        <div class="top">
-            <div class="avg-guess">
+        <div class="avg-guess-player-name">
                 <h2>Average Guess : 0</h2>
-            </div>
-            <div class="player-name">
                 <h2>Player: Player1</h2>
-            </div>
         </div>
         <div class="container">
             <div class="out-of-words">
@@ -23,24 +18,21 @@
             <div class="main-text">
                 Guess The number
             </div>
-            <div class="sub-text">
-                Enter the number:
+            <div class="form-container">
+            <form action="#" method="post" class="game-form">
+                <label for="name">Enter the number : </label>
+                <input type="number" id="input-number" name="input-number" placeholder="Guess The number" required>
+            </form>
             </div>
-            <div class="number">
-                <form>
-                    <input type="number-guess">
-                </form>
+            <div class="result-container">
+                Result :  
+                <div class="result-box">
+                    Too Low
+                </div>
             </div>
-            <div class="sub-text">
-                Result:
-            </div>
-            
-
             <button class="check-btn">
                 Check
             </button>
         </div>
-        
-    </div>
 </body>
 </html>

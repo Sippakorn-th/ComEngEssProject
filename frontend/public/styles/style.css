@@ -49,12 +49,12 @@ section {
   overflow: hidden;
 }
 
-#main-table > thead {
+#main-table>thead {
   background: #555;
   color: white;
 }
 
-#main-table > thead > tr > th {
+#main-table>thead>tr>th {
   font-weight: lighter;
   text-align: left;
 }

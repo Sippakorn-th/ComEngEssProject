@@ -55,6 +55,7 @@ html {
   display: flex;
   padding: 10px;
   align-items: left;
+  font-size: 25px;
 }
 
 .signup-button {

@@ -42,6 +42,11 @@ html {
     left: 10px;
 }
 
+.button:hover {
+    background-color: #886fc0;
+}
+
+
 .main-text {
     font-size: 4.5rem;
     text-align: left;

@@ -22,9 +22,13 @@ body {
   font-size: 6rem;
   text-align: center;
   padding-top: 2rem;
-  margin-bottom: 6rem;
+  margin-bottom: 2.5rem;
 }
-.signin-btn ,.register-btn{
+.player-name{
+    font-size: 4rem;
+    text-align: center;
+}
+.start-game-btn ,.leaderboard-btn{
   background-color: var(--purple-color);
   color: white;
   padding: 0.5rem;
@@ -36,6 +40,6 @@ body {
   display: flex;
   justify-content: center;
 }
-.signin-btn:hover ,.register-btn:hover{
+.start-game-btn:hover ,.leaderboard-btn:hover{
   cursor: pointer;
 }

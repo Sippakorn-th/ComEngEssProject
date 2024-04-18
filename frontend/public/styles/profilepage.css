@@ -12,12 +12,6 @@ body {
   background-color: var(--brown-color);
 }
 
-.out-of-words{
-    padding-top: 2%;
-    padding-right: 2%;
-    text-align: right;
-}
-
 .container{
   width: 80%;
   height: 530px;
@@ -30,32 +24,27 @@ body {
   padding-top: 2rem;
   margin-bottom: 2.5rem;
 }
-.sub-text{
-    padding-left: 15%;
-}
-.player-name{
-    font-size: 2rem;
-    text-align: right;
-    color: white;
-}
-.avg-guess{
-    font-size: 2rem;
-    text-align: left;
-    color: white;
-}
 
-.check-btn{
+.name-text,.score-text,.rank-5num-text,.rank-10num-text{
+    padding-left: 10%;
+    padding-top: 3%;
+    font-size: 1.5rem;
+}
+.button-holder{
+    
+}
+.profile-back-button{
   background-color: var(--purple-color);
   color: white;
   padding: 0.5rem;
   border: none;
   border-radius: 0.2rem;
   width: calc(200px + 20vw);
-  margin: 2rem auto;
+  margin:auto;
   font-size: 4rem;
   display: flex;
   justify-content: center;
 }
-.start-game-btn:hover ,.leaderboard-btn:hover{
+.profile-back-button:hover{
   cursor: pointer;
 }

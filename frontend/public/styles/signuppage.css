@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Maiden+Orange&display=swap");
 
+* {
+  font-family: "Maiden Orange", sans-serif;
+}
+
 body,
 html {
   margin: 0;
@@ -9,7 +13,6 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: "Maiden Orange", sans-serif;
 }
 
 .container {
@@ -37,6 +40,11 @@ html {
   font-size: 50px;
   margin: 0;
 }
+
+.signup-input {
+  font-size: 25px;
+}
+
 .signup-input-field {
   height: 44px;
   width: 345px;
@@ -48,6 +56,7 @@ html {
   display: flex;
   padding: 10px;
   align-items: left;
+  font-size: 25px;
 }
 
 .signup-button {
@@ -60,6 +69,7 @@ html {
   color: #fff;
   cursor: pointer;
   align-self: center;
+  font-size: 30px;
 }
 
 .signup-button:hover {
@@ -77,6 +87,7 @@ html {
   color: #fff;
   cursor: pointer;
   align-self: flex-start;
+  font-size: 30px;
 }
 
 .signup-back-button:hover {

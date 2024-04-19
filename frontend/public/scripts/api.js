@@ -36,8 +36,12 @@ export async function filterItems(filterName, lowerPrice, upperPrice) {
 }
 
 export async function getMembers() {
-  // TODO4: implement this function
-  return /* return all members */;
+  const members = await fetch(`${BACKEND_URL}/members`).then((r) => r.json());
+  console.log("heello");
+  console.log(members);
+  
+
+  return members;
 }
 
 export async function createMember(member) {

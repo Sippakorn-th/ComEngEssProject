@@ -21,9 +21,21 @@ export const createMember = async (req, res) => {
   }
 };
 
+// export const getMembers = async (req, res) => {
+//   const members = await Member.find();
+
+//   res.status(200).json(members);
+// };
+
 export const getMembers = async (req, res) => {
   // TODO4: implement this function
-  res.status(501).send("Unimplemented");
+  try {
+    const members = await Member.find();
+    res.status(200).send(members);
+  } catch(err){
+    console.log(err);
+    res.status(501).send("Unimplemented")
+  }
 };
 
 export const deleteMember = async (req, res) => {

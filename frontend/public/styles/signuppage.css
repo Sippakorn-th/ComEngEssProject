@@ -4,40 +4,30 @@
   font-family: "Maiden Orange", sans-serif;
 }
 
-body,
-html {
-  margin: 0;
-  padding: 0;
+body{
   background-color: #4b1e22; /* Set background color */
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .container {
-  margin: 3.1rem auto;
   background-color: #eee;
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   padding: 20px;
-  width: 696px;
-  height: 787px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  margin: 5rem auto;
+  width: 80%;
 }
 
 .content {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column; /* Stack children vertically */
+  width: 90%;
+  margin: 1rem auto;
 }
-
+.content form{
+  width: 35%;
+  margin: 0 auto;
+}
 .signup-header {
   text-align: center;
-  font-size: 50px;
+  font-size: 3.125rem;
   margin: 0;
 }
 
@@ -47,21 +37,20 @@ html {
 
 .signup-input-field {
   height: 44px;
-  width: 345px;
-  margin-bottom: 10px;
+  width: 100%;
   padding: 10px;
   border-radius: 5px;
   border: 1px solid #ccc;
   background-color: #d9d9d9;
   display: flex;
-  padding: 10px;
   align-items: left;
   font-size: 25px;
 }
 
 .signup-button {
-  width: 367px;
+  width: calc(100% + 24px);
   height: 54px;
+  font-size: 30px;
   margin-top: 20px;
   border: none;
   border-radius: 5px;
@@ -69,7 +58,6 @@ html {
   color: #fff;
   cursor: pointer;
   align-self: center;
-  font-size: 30px;
 }
 
 .signup-button:hover {
@@ -79,17 +67,26 @@ html {
 .signup-back-button {
   width: 142px;
   height: 64px;
-  margin-top: 20px;
-  margin-left: 20px;
   border: none;
   border-radius: 5px;
   background-color: #7960b3;
   color: #fff;
   cursor: pointer;
-  align-self: flex-start;
   font-size: 30px;
 }
 
 .signup-back-button:hover {
   background-color: #886fc0;
+}
+@media screen and (max-width: 600px) {
+  .content form{
+    width: 50%;
+  }
+  .signup-input-field {
+    padding: 10px;
+    font-size: 1rem;
+  }
+  .signup-back-button {
+    width: calc(3rem + 10vw);
+  }
 }

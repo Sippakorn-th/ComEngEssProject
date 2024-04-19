@@ -20,6 +20,7 @@ body {
   padding: 0 1.5rem;
 }
 .container{
+  border-radius: 5px;
   width: 80%;
   height: 530px;
   background-color: var(--grey-color);

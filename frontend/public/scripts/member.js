@@ -38,12 +38,21 @@ export async function populateMembers() {
   })
 }
 
-export async function handleCreateMember() {
-  const nameToAdd = document.getElementById("member-name-to-add");
+// export async function handleCreateMember() {
+//   const nameToAdd = document.getElementById("member-name-to-add");
 
-  await createMember({ name: nameToAdd.value });
-  await fetchAndDrawTable();
-  await populateMembers();
+//   await createMember({ name: nameToAdd.value });
+//   await fetchAndDrawTable();
+//   await populateMembers();
+
+//   nameToAdd.value = "";
+// }
+
+export async function handleCreateMember() {
+  const emailToAdd = document.getElementById("email-to-add");
+  const nameToAdd = document.getElementById("username-to-add");
+  const passwordToAdd = document.getElementById("password-to-add");
+  await createMember({ email:emailToAdd.value,name: nameToAdd.value ,password:passwordToAdd.value});
 
   nameToAdd.value = "";
 }

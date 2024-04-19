@@ -1,5 +1,12 @@
 import { BACKEND_URL } from "./config.js";
 
+/*
+sign in 
+sign up
+profile
+get score
+*/
+
 export async function getItems() {
   const items = await fetch(`${BACKEND_URL}/items`).then((r) => r.json());
 
@@ -34,7 +41,13 @@ export async function getMembers() {
 }
 
 export async function createMember(member) {
-  // TODO4: implement this function
+  await fetch(`${BACKEND_URL}/members`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(member),
+  });
 }
 
 export async function deleteMember(id, item) {

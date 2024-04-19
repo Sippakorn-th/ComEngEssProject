@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <title>mainpage</title>
     <link rel="stylesheet" href="../styles/mainpage.css" />
+    <script src="../scripts/navigate.js"></script>
   </head>
 
   <body>
@@ -12,13 +13,13 @@
         Guess The Number
       </div>
       <div class="player-name">
-        Player: <a href="#mainpage-to-profile">Player1</a>
+        Player: <a href="#mainpage-to-profile" onclick="goToProfilePage()">Player1</a>
       </div>
-      <button id="start-game-btn" class="start-game-btn">
+      <button id="start-game-btn" class="start-game-btn"  onclick="goToGamePlayPage()">
           Start Game
       </button>
       <div class="divider"></div>
-      <button id="leaderboard-btn" class="leaderboard-btn">
+      <button id="leaderboard-btn" class="leaderboard-btn"  onclick="goToLeaderboardPage()">
         Leaderboard
     </button>
     </section>

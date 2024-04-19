@@ -18,8 +18,14 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     else{
       handleCreateMember();
-      const members = await getMembers(); 
-      alert(members);
+      console.log("beget")
+      //const members = await getMembers(); 
+      console.log(getMembers().then((members) => {
+        console.log(members);
+      })
+      .catch((err) => {
+        console.error(err);
+      }));
     }
     
   });

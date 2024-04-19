@@ -1,12 +1,5 @@
 import { BACKEND_URL } from "./config.js";
 
-/*
-sign in 
-sign up
-profile
-get score
-*/
-
 export async function getItems() {
   const items = await fetch(`${BACKEND_URL}/items`).then((r) => r.json());
 
@@ -36,10 +29,9 @@ export async function filterItems(filterName, lowerPrice, upperPrice) {
 }
 
 export async function getMembers() {
-  const members = await fetch(`${BACKEND_URL}/members`).then((r) => r.json());
-  console.log("heello");
-  console.log(members);
-  
+  const members = await fetch(`${BACKEND_URL}/members`, {
+    method: "GET",
+  }).then((r) => r.json());
 
   return members;
 }

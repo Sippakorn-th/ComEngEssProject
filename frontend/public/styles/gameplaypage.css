@@ -1,43 +1,44 @@
 @import url("https://fonts.googleapis.com/css2?family=Maiden+Orange&display=swap");
 
 :root {
-  --purple-color: #7960B3; /* Define a custom color */
-  --brown-color:#4B1E22;
-  --grey-color:#EEEEEE;
-  --dark-grey-color: #D9D9D9;
+  --purple-color: #7960b3; /* Define a custom color */
+  --brown-color: #4b1e22;
+  --grey-color: #eeeeee;
+  --dark-grey-color: #d9d9d9;
 }
-*{
+* {
   font-family: "Maiden Orange", sans-serif;
 }
 body {
   background-color: var(--brown-color);
 }
-.avg-guess-player-name{
+.avg-guess-player-name,
+.guess-count {
   font-size: 2rem;
   justify-content: space-between;
   color: white;
   display: flex;
   padding: 0 1.5rem;
 }
-.container{
+.container {
   border-radius: 5px;
   width: 80%;
   height: 530px;
   background-color: var(--grey-color);
   margin: 0 auto;
 }
-.main-text{
+.main-text {
   font-size: 6rem;
   text-align: center;
   margin-bottom: 2.5rem;
 }
-.out-back{
+.out-back {
   padding: 1rem;
   width: 95%;
   display: flex;
   justify-content: space-between;
 }
-.back-btn{
+.back-btn {
   background-color: var(--purple-color);
   color: white;
   padding: 0.5rem;
@@ -48,29 +49,30 @@ body {
   display: flex;
   justify-content: center;
 }
-.out-of-words{
+.out-of-words {
   font-size: 3rem;
   text-align: right;
 }
-.form-container{
+.form-container {
   margin: 0 auto;
   width: 45%;
 }
-.form-container form label, .result-container{
+.form-container form label,
+.result-container {
   font-size: 2.25rem;
 }
-.form-container form input{
+.form-container form input {
   padding: 1rem;
   width: 50%;
   border: none;
   background-color: var(--dark-grey-color);
 }
-.result-container{
+.result-container {
   display: flex;
   margin: 0.5rem auto;
   width: 45%;
 }
-.result-box{
+.result-box {
   background-color: var(--dark-grey-color);
   width: 50%;
   font-size: 1rem;
@@ -80,7 +82,7 @@ body {
   align-items: center;
   margin-left: 2rem;
 }
-.check-btn{
+.check-btn {
   background-color: var(--purple-color);
   color: white;
   padding: 0.5rem;
@@ -92,6 +94,11 @@ body {
   display: flex;
   justify-content: center;
 }
-.check-btn:hover, .back-btn:hover{
+.check-btn:hover,
+.back-btn:hover {
   cursor: pointer;
+}
+
+.message {
+  margin: 0;
 }

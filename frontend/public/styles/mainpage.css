@@ -32,7 +32,8 @@ body {
   text-align: center;
 }
 .start-game-btn,
-.leaderboard-btn {
+.leaderboard-btn,
+.log-out-btn {
   background-color: var(--purple-color);
   color: white;
   padding: 0.5rem;
@@ -44,7 +45,13 @@ body {
   display: flex;
   justify-content: center;
 }
+.log-out-btn{
+  margin: 0;
+  padding: 1rem;
+  width: fit-content;
+}
 .start-game-btn:hover,
-.leaderboard-btn:hover {
+.leaderboard-btn:hover,
+.log-out-btn:hover {
   cursor: pointer;
 }

@@ -1,5 +1,7 @@
 "use strict";
 
+import { handleCreateScore } from "./score.js";
+
 const container = document.querySelector(".container");
 const btnPlayEl = document.querySelector(".btn_again");
 const btnChckEl = document.querySelector(".check-btn");
@@ -56,8 +58,9 @@ document.addEventListener("DOMContentLoaded", function () {
           msgEl.textContent = guess > secretNum ? "Too High" : "Too Low";
         } else {
           //success
-          if (totalRound === 5) {
-            console.log("YES");
+          if (totalRound === 2) {
+            handleCreateScore(totalCount / totalRound);
+            console.log("CREATE?");
             msgEl.textContent = "Finish! See you in Leaderboard";
             btnChckEl.innerText = "Go to Leaderboard";
           } else {

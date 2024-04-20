@@ -15,3 +15,13 @@ export const createScore = async (req, res) => {
     }
   }
 };
+
+export const getScores = async (req, res) => {
+  try {
+    const scores = await Score.find();
+    res.status(200).send(scores);
+  } catch (err) {
+    console.log(err);
+    res.status(501).send("Unimplemented")
+  }
+};

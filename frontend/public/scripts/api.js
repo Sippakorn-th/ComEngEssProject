@@ -28,11 +28,11 @@ export async function filterItems(filterName, lowerPrice, upperPrice) {
   return /* return the filted items */;
 }
 
-export async function getMembers() {
+export async function getMembers() {  
   const members = await fetch(`${BACKEND_URL}/members`, {
     method: "GET",
   }).then((r) => r.json());
-
+  
   return members;
 }
 

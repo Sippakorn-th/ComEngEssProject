@@ -49,3 +49,13 @@ export async function createMember(member) {
 export async function deleteMember(id, item) {
   // TODO4: implement this function
 }
+
+export async function createScore(score) {
+  await fetch(`${BACKEND_URL}/scores`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(score),
+  });
+}

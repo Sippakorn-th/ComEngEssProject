@@ -1,8 +1,7 @@
 import { getMembers } from "./api.js";
-import { handleCreateMember} from "./member.js";
+import { handleCreateMember } from "./member.js";
 
 document.addEventListener("DOMContentLoaded", () => {
-
   const addMemberButton = document.getElementById("signup-button");
 
   addMemberButton.addEventListener("click", async () => {
@@ -10,23 +9,38 @@ document.addEventListener("DOMContentLoaded", () => {
     const nameToAdd = document.getElementById("username-to-add");
     const passwordToAdd = document.getElementById("password-to-add");
     const conpasswordToAdd = document.getElementById("con-password-to-add");
-    if(emailToAdd.value===""||nameToAdd.value===""||passwordToAdd.value===""||conpasswordToAdd.value===""){
+    if (
+      emailToAdd.value === "" ||
+      nameToAdd.value === "" ||
+      passwordToAdd.value === "" ||
+      conpasswordToAdd.value === ""
+    ) {
       alert("Please fill in all required fields.");
-    }
-    else if(passwordToAdd.value!=conpasswordToAdd.value){
+    } else if (passwordToAdd.value != conpasswordToAdd.value) {
       alert("Passwords do not match. Please re-enter.");
-    }
-    else{
+    } else {
       handleCreateMember();
-      console.log("beget")
-      //const members = await getMembers(); 
-      console.log(getMembers().then((members) => {
-        console.log(members);
-      })
-      .catch((err) => {
-        console.error(err);
-      }));
+      window.location.href = "./mainpage.html";
     }
-    
   });
 });
+
+// Modify the goToIndexPage function to fetch all members
+async function getAllMems() {
+  try {
+    const members = await getMembers();
+    // Now you have access to the 'members' data, you can do something with it
+    console.log(members);
+
+    // Add your code here to handle the members data, such as updating the UI
+
+    // For example, you can navigate to the index page after fetching members
+  } catch (error) {
+    console.error("Error fetching members:", error);
+  }
+}
+
+// Add an event listener to the "Back" button
+document
+  .querySelector(".signup-back-button")
+  .addEventListener("click", getAllMems);

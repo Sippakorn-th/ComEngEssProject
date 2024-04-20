@@ -45,7 +45,7 @@ body {
   display: flex;
   justify-content: center;
 }
-.log-out-btn{
+.log-out-btn {
   margin: 0;
   padding: 1rem;
   width: fit-content;
@@ -54,4 +54,17 @@ body {
 .leaderboard-btn:hover,
 .log-out-btn:hover {
   cursor: pointer;
+}
+@media screen and (max-width: 600px) {
+  .main-text {
+    font-size: 4rem;
+  }
+  .player-name {
+    font-size: 3rem;
+  }
+  .start-game-btn,
+  .leaderboard-btn,
+  .log-out-btn {
+    font-size: 3rem;
+  }
 }

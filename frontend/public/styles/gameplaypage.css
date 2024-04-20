@@ -23,7 +23,7 @@ body {
 .container {
   border-radius: 5px;
   width: 80%;
-  height: 530px;
+  padding: 20px;
   background-color: var(--grey-color);
   margin: 0 auto;
 }
@@ -36,15 +36,15 @@ body {
   padding: 1rem;
   width: 95%;
   display: flex;
+  align-items: center;
   justify-content: space-between;
 }
 .back-btn {
   background-color: var(--purple-color);
   color: white;
-  padding: 0.5rem;
+  padding: 1rem;
   border: none;
   border-radius: 0.2rem;
-  width: 120px;
   font-size: 3rem;
   display: flex;
   justify-content: center;
@@ -55,7 +55,7 @@ body {
 }
 .form-container {
   margin: 0 auto;
-  width: 45%;
+  width: 60%;
 }
 .form-container form label,
 .result-container {
@@ -67,20 +67,17 @@ body {
   border: none;
   background-color: var(--dark-grey-color);
 }
-.result-container {
+.flex{
   display: flex;
-  margin: 0.5rem auto;
-  width: 45%;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+}
+.result-container {
+  width: 20%;
 }
 .result-box {
-  background-color: var(--dark-grey-color);
-  width: 50%;
-  font-size: 1rem;
-  color: grey;
-  padding: 1rem;
-  display: flex;
-  align-items: center;
-  margin-left: 2rem;
+  font-size: 2.25rem;
 }
 .check-btn {
   background-color: var(--purple-color);
@@ -102,3 +99,19 @@ body {
 .message {
   margin: 0;
 }
+@media screen and (max-width: 600px) {
+  .main-text{
+    font-size: 4rem;
+  }
+  .avg-guess-player-name,
+  .guess-count{
+  font-size: 1.25rem;
+}
+.back-btn,.check-btn{
+  font-size: 2rem;
+}
+.out-of-words{
+  font-size: 2rem;
+}
+}
+

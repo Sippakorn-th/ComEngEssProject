@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
             }
           }
         }
-        console.log("Wrong username of password");
+        alert("Wrong username or password");
         return;
       })
         .catch((err) => {

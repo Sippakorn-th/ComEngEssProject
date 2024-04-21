@@ -1,50 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Game Play Page</title>
-    <link rel="stylesheet" href="../styles/gameplaypage.css" />
+    <link rel="stylesheet" href="../styles/gameplay.css" />
     <script src="../scripts/navigate.js"></script>
-    <script type ="module" src="../scripts/gameplay.js"></script>
-    
+    <script type="module" src="../scripts/gameplay.js"></script>
+
 </head>
+
 <body>
-        <div class="avg-guess-player-name">
-                <h2>Average Guess : 0</h2>
-                <h2>Player: Player1</h2>
-        </div>
-        <div class="container">
-            <div class="out-back">
-                <button class="back-btn" onclick="goToMainPage()">Back</button>
+    <div class="avg-guess-player-name">
+        <h2>Average Guess : 0</h2>
+        <h2>Player: Player1</h2>
+    </div>
+    <div class="container">
+        <div class="out-back">
+            <button class="back-btn" onclick="goToMainPage()">Back</button>
             <div class="out-of-words">
                 1 of 5 words
             </div>
-            </div>
-            <div class="main-text">
-                Guess The number
-            </div>
-            <div class="flex">
+        </div>
+        <div class="main-text">
+            Guess The number
+        </div>
+        <div class="flex">
             <div class="form-container">
-            <form action="#" method="post" class="game-form">
-                <label for="name">Enter the number : </label>
-                <input type="number" id="input-number" name="input-number" placeholder="Guess The number" required>
-            </form>
+                <form action="#" method="post" class="game-form">
+                    <label for="name">Enter the number : </label>
+                    <input type="number" id="input-number" name="input-number" placeholder="Guess The number" required>
+                </form>
             </div>
             <div class="result-container">
                 <div class="result-box">
                     <p class="message">Guessing...</p>
-                    
-                </div><input type="text" id="playerName" class="playerName" placeholder="Your Name" >
+
+                </div><input type="text" id="playerName" class="playerName" placeholder="Your Name">
             </div>
-            </div>
-            <button class="check-btn">
-                Check
-            </button>
         </div>
-        <div class="guess-count">
-            <h2></h2>
-            <h2>Guess: 0</h2>
+        <button class="check-btn">
+            Check
+        </button>
+    </div>
+    <div class="guess-count">
+        <h2></h2>
+        <h2>Guess: 0</h2>
     </div>
 </body>
+
 </html>

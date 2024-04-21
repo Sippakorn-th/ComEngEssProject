@@ -1,112 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>gameplaytemplated</title>
-    <link rel="stylesheet" href="../styles/gameplaytemplated.css" />
-    <script src="../scripts/navigate.js"></script>
-  </head>
-  <body>
-    <section class="main-top-section">
-      <div class="blur alt">
-        <div class="hero-img">
-          <img src="../../assets/unsplash_R401qwThw7w.jpg" alt="" />
-        </div>
-        <div class="overlay">
-          <div class="overlay-container">
-            <div class="overlay-text">
-                <div class="out-back">
-                    <button class="button-small" onclick="goToMainPage()">Back</button>
-                <div class="out-of-words">
-                    1 of 5 words
-                </div>
-                </div>
-                    <div class="main-text">Guess The Number</div>
-                    <div class="flex">
-                        <div class="form-container">
-                        <form action="#" method="post" class="game-form">
-                            <label for="name">Enter the number : </label>
-                            <input type="number" id="input-number" name="input-number" placeholder="Guess The number" required>
-                        </form>
-                        </div>
-                        <div class="result-container">
-                            <div class="result-box">
-                                <p class="message">Guessing...</p>
-                                
-                            </div><input type="text" id="playerName" class="playerName" placeholder="Your Name" >
-                        </div>
-                        </div>
 
-                        <button class="button">
-                            Check
-                        </button>
-                        <div class="out-back">
-                            <div class="out-of-words bottom">
-                                Average Guess : 0
-                            </div>
-                        <div class="out-of-words bottom">
-                            Guess: 0
-                        </div>
-                        </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>gameplaytemplated</title>
+  <link rel="stylesheet" href="../styles/gameplaytemplated.css" />
+  <script src="../scripts/navigatetemplated.js"></script>
+  <script type="module" src="../scripts/gameplay.js"></script>
+</head>
+
+<body>
+  <section class="main-top-section">
+    <div class="blur alt">
+      <div class="hero-img">
+        <img src="../../assets/unsplash_R401qwThw7w.jpg" alt="" />
+      </div>
+      <div class="overlay">
+        <div class="overlay-container">
+          <div class="overlay-text">
+            <div class="out-back">
+              <button class="button-small" onclick="goToMainPage()">Back</button>
+              <div class="out-of-words">
+                1 of 5 words
+              </div>
+            </div>
+            <div class="main-text">Guess The Number</div>
+            <div class="flex">
+              <div class="form-container">
+                <form action="#" method="post" class="game-form">
+                  <label for="name">Enter the number : </label>
+                  <input type="number" id="input-number" name="input-number" placeholder="Guess The number" required>
+                </form>
+              </div>
+              <div class="result-container">
+                <div class="result-box">
+                  <p class="message">Guessing...</p>
+
+                </div><input type="text" id="playerName" class="playerName" placeholder="Your Name">
+              </div>
+            </div>
+
+            <button class="button">
+              Check
+            </button>
+            <div class="out-back">
+              <div class="out-of-words bottom">
+                Average Guess : 0
+              </div>
+              <div class="out-of-words bottom">
+                Guess: 0
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="main-bottom-section">
-        <div class="section-title">
-          <h2>This is footer of Game Play Page</h2>
+  <section class="main-bottom-section">
+    <div class="section-title">
+      <h2>This is footer of Game Play Page</h2>
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis magnam
+        beatae rerum odit provident? Provident quod voluptas dicta ipsum et?
+      </p>
+    </div>
+    <div class="features">
+      <h2>Features</h2>
+    </div>
+    <div class="row">
+      <!-- leaderboard -->
+      <div class="leaderboard-section">
+        <div class="categorie-item">
+          <h3>Leaderboard</h3>
+          <img src="../../assets/unsplash_R401qwThw7w.jpg"></img>
           <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis magnam
-            beatae rerum odit provident? Provident quod voluptas dicta ipsum et?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Nostrum, dolorum!
+          </p>
+          <span></span>
+        </div>
+      </div>
+      <!-- profiles -->
+      <div class="profiles-section">
+        <div class="categorie-item">
+          <h3>Profiles</h3>
+          <img src="../../assets/unsplash_R401qwThw7w.jpg"></img>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus,
+            eius!
           </p>
         </div>
-        <div class="features"><h2>Features</h2></div>
-        <div class="row">
-          <!-- leaderboard -->
-          <div class="leaderboard-section">
-            <div class="categorie-item">
-                <h3>Leaderboard</h3>
-                <img
-                src="../../assets/unsplash_R401qwThw7w.jpg"
-              ></img>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Nostrum, dolorum!
-                </p>
-                <span></span>
-            </div>
-          </div>
-          <!-- profiles -->
-          <div class="profiles-section">
-            <div class="categorie-item">
-                <h3>Profiles</h3>
-                <img
-                src="../../assets/unsplash_R401qwThw7w.jpg"
-              ></img>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus,
-                  eius!
-                </p>
-            </div>
-          </div>
-          <!-- achievement -->
-          <div class="achievement-section">
-            <div class="categorie-item">
-                <h3>Achievement</h3>
-                <img
-                src="../../assets/unsplash_R401qwThw7w.jpg"
-              ></img>
-                <p>
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                  Architecto, excepturi.
-                </p>
-            </div>
-          </div>
+      </div>
+      <!-- achievement -->
+      <div class="achievement-section">
+        <div class="categorie-item">
+          <h3>Achievement</h3>
+          <img src="../../assets/unsplash_R401qwThw7w.jpg"></img>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+            Architecto, excepturi.
+          </p>
         </div>
-      </section>
-  </body>
-</html>
+      </div>
+    </div>
+  </section>
+</body>
 
+</html>

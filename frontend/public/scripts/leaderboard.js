@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 return dateB - dateA;
             }
         });
-        const topScores = scores.slice(0, 7);
+        const topScores = scores.slice(0, 10);
         topScores.forEach((score, index) => {
             const row = table.insertRow(-1);
 

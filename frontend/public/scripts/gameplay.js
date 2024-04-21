@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", function () {
         btnChckEl.innerText = "Submit Your Name";
         isAddName = true;
       } else {
-        window.location.href = "./leaderboardtemplated.html";
+        window.location.href = "./leaderboard.html";
       }
     } else if (btnChckEl.innerText === "Submit Your Name") {
       if (nameInput.value === "") {

@@ -16,47 +16,47 @@ document.addEventListener("DOMContentLoaded", () => {
       conpasswordToAdd.value === ""
     ) {
       alert("Please fill in all required fields.");
-    } else if (String(nameToAdd.value).length > 10) {
+    } else if(String(nameToAdd.value).length>10){
       alert("Username must not longer than 10 character.");
     } else {
       var emailIsTaken = false;
       var usernameIsTaken = false;
-
+      
 
       getMembers()
-        .then((members) => {
-          console.log(members);
-          for (var i = 0; i < members.length; i++) {
-            if (members[i].name === nameToAdd.value) {
-              usernameIsTaken = true;
-              break; // Once found, no need to continue the loop
-            }
+      .then((members) => {
+        console.log(members);
+        for (var i = 0; i < members.length; i++) {
+          if (members[i].name === nameToAdd.value) {
+            usernameIsTaken = true;
+            break; // Once found, no need to continue the loop
           }
-
-          for (var i = 0; i < members.length; i++) {
-            if (members[i].email === emailToAdd.value) {
-              emailIsTaken = true;
-              break; // Once found, no need to continue the loop
-            }
+        }
+    
+        for (var i = 0; i < members.length; i++) {
+          if (members[i].email === emailToAdd.value) {
+            emailIsTaken = true;
+            break; // Once found, no need to continue the loop
           }
-
-          // Check email and username taken after the loops
-          if (emailIsTaken) {
-            alert("This email is taken, please change your email or sign in");
-          } else if (usernameIsTaken) {
-            alert("This username is taken, please change your username or sign in");
-          } else if (String(passwordToAdd.value).length < 8) {
-            alert("Password must longer than 8 character.");
-          } else if (passwordToAdd.value != conpasswordToAdd.value) {
+        }
+    
+        // Check email and username taken after the loops
+        if (emailIsTaken) {
+          alert("This email is taken, please change your email or sign in");
+        } else if (usernameIsTaken) {
+          alert("This username is taken, please change your username or sign in");
+        } else if(String(passwordToAdd.value).length<8){
+          alert("Password must longer than 8 character.");
+        } else if (passwordToAdd.value != conpasswordToAdd.value) {
             alert("Passwords do not match. Please re-enter.");
-          } else {
-            handleCreateMember();
-            window.location.href = "./maintemplated.html";
-          }
-        })
-        .catch((err) => {
-          console.error(err);
-        });
+        } else{
+          handleCreateMember();
+          window.location.href = "./mainpage.html";
+        }
+      })
+      .catch((err) => {
+        console.error(err);
+      });
 
     }
   });

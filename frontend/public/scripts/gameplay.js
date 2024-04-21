@@ -25,7 +25,8 @@ document.addEventListener("DOMContentLoaded", function () {
   const msgEl = document.querySelector(".result-box");
   const guessCountEl = document.querySelector(".guess-count h2:last-of-type");
   const outOfWordsEl = document.querySelector(".out-of-words");
-
+  const nameInput = document.getElementById("playerName");
+  let isAddName = false;
   btnChckEl.addEventListener("click", () => {
     if (btnChckEl.innerText === "Next Round") {
       //new round
@@ -40,8 +41,22 @@ document.addEventListener("DOMContentLoaded", function () {
       outOfWordsEl.textContent =
         parseInt(outOfWordsEl.textContent) + 1 + " of 5 words";
     } else if (btnChckEl.innerText === "Go to Leaderboard") {
-      document.getElementById("playerName").style.display = "block";
-      //window.location.href = "./leaderboard.html";
+      if (isAddName === false) {
+        msgEl.textContent = "Please enter your name first!";
+        nameInput.style.display = "block";
+        btnChckEl.innerText = "Submit Your Name";
+        isAddName = true;
+      } else {
+        window.location.href = "./leaderboard.html";
+      }
+    } else if (btnChckEl.innerText === "Submit Your Name") {
+      if (nameInput.value === "") {
+        alert("Please enter your name");
+      } else {
+        msgEl.textContent = "Let's go to leaderboard!";
+        handleCreateScore(totalCount / totalRound, nameInput.value);
+        btnChckEl.innerText = "Go to Leaderboard";
+      }
     } else {
       const guess = Number(inputEl.value);
 
@@ -60,7 +75,6 @@ document.addEventListener("DOMContentLoaded", function () {
         } else {
           //success
           if (totalRound === 1) {
-            handleCreateScore(totalCount / totalRound);
             console.log("CREATE?");
             msgEl.textContent = "Finish! See you in Leaderboard";
             btnChckEl.innerText = "Go to Leaderboard";

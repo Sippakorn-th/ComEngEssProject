@@ -119,7 +119,8 @@ body {
 .playerName {
   padding: 1rem;
   width: 182px; /* Set width to 182px */
-  height: 94px; /* Set height to 94px */
+  height: 15px; /* Set height to 94px */
   border: none;
   background-color: var(--dark-grey-color);
+  display: none;
 }

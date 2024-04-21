@@ -6,6 +6,7 @@
     <title>gameplaytemplated</title>
     <link rel="stylesheet" href="../styles/gameplaytemplated.css" />
     <script src="../scripts/navigate.js"></script>
+    <script type="module" src="../scripts/gameplay.js"></script>
   </head>
   <body>
     <section class="main-top-section">
@@ -33,19 +34,17 @@
                         <div class="result-container">
                             <div class="result-box">
                                 <p class="message">Guessing...</p>
-                                
                             </div><input type="text" id="playerName" class="playerName" placeholder="Your Name" >
                         </div>
                         </div>
-
-                        <button class="button">
+                        <button class="check-btn">
                             Check
                         </button>
                         <div class="out-back">
-                            <div class="out-of-words bottom">
+                            <div class="avg-guess-player-name bottom">
                                 Average Guess : 0
                             </div>
-                        <div class="out-of-words bottom">
+                        <div class="guess-count bottom">
                             Guess: 0
                         </div>
                         </div>

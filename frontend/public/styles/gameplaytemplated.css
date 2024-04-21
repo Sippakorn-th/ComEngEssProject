@@ -107,12 +107,18 @@ body {
     text-align: right;
     color: white;
   }
+  .avg-guess-player-name,.guess-count{
+    font-size: 2rem;
+  
+    color: white;
+  }
   .main-text {
     font-size: 4rem;
     text-align: center;
     margin-bottom: 2.5rem;
   }
 .form-container {
+  width: 50%;
     margin: 0 auto;
   }
   .form-container form label,
@@ -130,15 +136,15 @@ body {
     color: white;
     justify-content: space-between;
     align-items: center;
-    width: 80%;
+    width: 100%;
   }
-  .result-container {
-    width: 20%;
+  .result-container{
+    width: 50%;
   }
   .result-box {
     font-size: 2.25rem;
   }
-  .button {
+  .check-btn {
     width: 100%;
     margin: 1rem auto;
   min-width: fit-content;
@@ -168,7 +174,7 @@ body {
   }
   .playerName {
     padding: 1rem;
-    width: 182px; /* Set width to 182px */
+    width: 50%; /* Set width to 182px */
     height: 15px; /* Set height to 94px */
     border: none;
     background-color: var(--dark-grey-color);
@@ -210,8 +216,10 @@ body {
     }
 }
 @media only screen and (max-width: 870px) {
+  
    .overlay{
     width: 70%;
+    max-height: 450px;
     top: 5%;
         .alt & {
         left: 15%;
@@ -221,7 +229,7 @@ body {
     font-size: 2.5rem;
 }
 .form-container form label,
-  .result-container {
+  .result-container ,.result-box{
     font-size: 2rem;
   }
 }
@@ -230,6 +238,20 @@ body {
   .button {
     padding: 20px 5px;
   }
+  .overlay{
+    overflow-y: scroll;
+    max-height: 400px;
+  }
+  .form-container form input {
+    padding: 0.5rem;
+    width: 50%;
+    border: none;
+    background-color: var(--dark-grey-color);
+  }
+.form-container form label,
+.result-container,.message ,.result-box{
+font-size: 1.75rem;
+}
 }
 
 @media only screen and (max-width: 550px) {
@@ -252,16 +274,9 @@ body {
 .out-back{
 padding: 0.5rem 0;
 }
-    .form-container form input {
-        padding: 0.5rem;
-        width: 50%;
-        border: none;
-        background-color: var(--dark-grey-color);
-      }
-    .form-container form label,
-  .result-container,.message {
-    font-size: 1.75rem;
-  }
+.overlay{
+  max-height: 350px;
+}
 }
   
 

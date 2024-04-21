@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const btnChckEl = document.querySelector(".check-btn");
   const inputEl = document.getElementById("input-number");
   const msgEl = document.querySelector(".result-box");
-  const guessCountEl = document.querySelector(".guess-count h2:last-of-type");
+  const guessCountEl = document.querySelector(".guess-count");
   const outOfWordsEl = document.querySelector(".out-of-words");
   const nameInput = document.getElementById("playerName");
   let isAddName = false;
@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", function () {
         parseInt(outOfWordsEl.textContent) + 1 + " of 5 words";
     } else if (btnChckEl.innerText === "Go to Leaderboard") {
       if (isAddName === false) {
-        msgEl.textContent = "Please enter your name first!";
+        msgEl.textContent = "Enter your name";
         nameInput.style.display = "block";
         btnChckEl.innerText = "Submit Your Name";
         isAddName = true;
@@ -53,7 +53,7 @@ document.addEventListener("DOMContentLoaded", function () {
       if (nameInput.value === "") {
         alert("Please enter your name");
       } else {
-        msgEl.textContent = "Let's go to leaderboard!";
+        msgEl.textContent = "Submitted";
         handleCreateScore(totalCount / totalRound, nameInput.value);
         btnChckEl.innerText = "Go to Leaderboard";
       }
@@ -67,7 +67,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const averageGuess = totalCount / totalRound;
         console.log(totalCount, "/", totalRound);
         document.querySelector(
-          ".avg-guess-player-name h2:first-of-type"
+          ".avg-guess-player-name"
         ).textContent = "Average Guess: " + averageGuess.toFixed(2);
         if (guess != secretNum) {
           //wrong guess
@@ -76,7 +76,7 @@ document.addEventListener("DOMContentLoaded", function () {
           //success
           if (totalRound === 1) {
             console.log("CREATE?");
-            msgEl.textContent = "Finish! See you in Leaderboard";
+            msgEl.textContent = "Correct!";
             btnChckEl.innerText = "Go to Leaderboard";
           } else {
             msgEl.textContent = "Congratulation!! You are right";

@@ -67,7 +67,7 @@ body {
   border: none;
   background-color: var(--dark-grey-color);
 }
-.flex{
+.flex {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -100,18 +100,26 @@ body {
   margin: 0;
 }
 @media screen and (max-width: 600px) {
-  .main-text{
+  .main-text {
     font-size: 4rem;
   }
   .avg-guess-player-name,
-  .guess-count{
-  font-size: 1.25rem;
-}
-.back-btn,.check-btn{
-  font-size: 2rem;
-}
-.out-of-words{
-  font-size: 2rem;
-}
+  .guess-count {
+    font-size: 1.25rem;
+  }
+  .back-btn,
+  .check-btn {
+    font-size: 2rem;
+  }
+  .out-of-words {
+    font-size: 2rem;
+  }
 }
 
+.playerName {
+  padding: 1rem;
+  width: 182px; /* Set width to 182px */
+  height: 94px; /* Set height to 94px */
+  border: none;
+  background-color: var(--dark-grey-color);
+}

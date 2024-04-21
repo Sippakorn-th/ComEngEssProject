@@ -40,7 +40,8 @@ document.addEventListener("DOMContentLoaded", function () {
       outOfWordsEl.textContent =
         parseInt(outOfWordsEl.textContent) + 1 + " of 5 words";
     } else if (btnChckEl.innerText === "Go to Leaderboard") {
-      window.location.href = "./leaderboard.html";
+      document.getElementById("playerName").style.display = "block";
+      //window.location.href = "./leaderboard.html";
     } else {
       const guess = Number(inputEl.value);
 
@@ -58,7 +59,7 @@ document.addEventListener("DOMContentLoaded", function () {
           msgEl.textContent = guess > secretNum ? "Too High" : "Too Low";
         } else {
           //success
-          if (totalRound === 2) {
+          if (totalRound === 1) {
             handleCreateScore(totalCount / totalRound);
             console.log("CREATE?");
             msgEl.textContent = "Finish! See you in Leaderboard";

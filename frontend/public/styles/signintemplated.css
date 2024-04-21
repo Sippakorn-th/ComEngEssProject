@@ -177,21 +177,27 @@ form{
     padding: 10px;
   }
 }
+@media only screen and (max-width: 1000px) {
+    .divider{
+      display: none;
+    }
+    .signup-back-button{
+      margin-left: 2.5rem;
+    }
+}
 @media only screen and (max-width: 870px) {
     .signup-header {
         font-size: 2.5rem;
-      }
-      .divider{
-        display: none;
-      }
-      .signup-back-button{
-        margin-left: 2.5rem;
       }
 }
 
 @media only screen and (max-width: 700px) {
     .overlay{
         top: 3%;
+        width: 70%;
+        .alt & {
+          left: 15%;
+        }
     }
   .signup-header {
     font-size: 2rem;
@@ -209,6 +215,22 @@ form{
   }
 }
 
+@media only screen and (max-width: 550px) {
+  .flex-res{
+    display: flex;
+  }
+  .pass-res{
+    margin-left: 2rem;
+  }
+  .overlay{
+    top: 10%;
+  }
+  .overlay-text form{
+    width: 100%;
+  }
+}
+  
+
 @media only screen and (max-width: 400px) {
   .overlay-text h2 {
     margin-top: 2rem;
@@ -220,6 +242,9 @@ form{
   .leaderboard-section, .profiles-section ,.achievement-section{
     width: 90%;
     margin: 0 auto;
+}
+.signup-back-button{
+  margin-left: 1.5rem;
 }
 }
 

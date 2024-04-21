@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", () => {
             alert("Passwords do not match. Please re-enter.");
           } else {
             handleCreateMember();
-            window.location.href = "./mainpagetemplated.html";
+            window.location.href = "./maintemplated.html";
           }
         })
         .catch((err) => {

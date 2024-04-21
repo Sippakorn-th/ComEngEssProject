@@ -10,25 +10,19 @@ document.addEventListener("DOMContentLoaded", () => {
       alert("Please fill in all required fields.");
     }
     else{
-        //console.log("beget")
         (getMembers().then((members) => {
             console.log(members);
             for(var i = 0; i < members.length; i++)
             {
               if(members[i].name === usernameToLogin.value)
               {
-                console.log("have user name");
                 if(members[i].password === passwordToLogin.value){
-                    console.log("correnct pass");
-                    return;
-                }
-                else{
-                    console.log("wrong pass");
+                    window.location.href = "./mainpage.html";
                     return;
                 }
               }
             }
-            console.log("dont have username");
+            console.log("Wrong username of password");
             return;
         })
         .catch((err) => {

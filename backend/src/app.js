@@ -1,7 +1,6 @@
 import express from "express";
 import cors from "cors";
 
-import ItemRoute from "./routes/itemRoute.js";
 import MemberRoute from "./routes/memberRoute.js";
 import ScoreRoute from "./routes/scoreRoute.js";
 
@@ -15,7 +14,6 @@ app.use(express.urlencoded({ extended: true }));
 app.use(cors());
 
 // use routes
-app.use("/items", ItemRoute);
 app.use("/members", MemberRoute);
 app.use("/scores", ScoreRoute);
 

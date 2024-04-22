@@ -32,7 +32,7 @@ export const getMembers = async (req, res) => {
   try {
     const members = await Member.find();
     res.status(200).send(members);
-  } catch(err){
+  } catch (err) {
     console.log(err);
     res.status(501).send("Unimplemented")
   }

@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     else {
       (getMembers().then((members) => {
-        console.log(members);
+        //console.log(members);
         for (var i = 0; i < members.length; i++) {
           if (members[i].name === usernameToLogin.value) {
             if (members[i].password === passwordToLogin.value) {

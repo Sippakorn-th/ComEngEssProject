@@ -13,7 +13,7 @@ const avg_guess = document.querySelector(".avg_guess");
 
 //random 1 to 20
 let secretNum = Math.trunc(Math.random() * 20 + 1);
-console.log(secretNum);
+//console.log(secretNum);
 let guess = 0;
 let totalRound = 1;
 let guessCount = 0;
@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", function () {
       //new round
       totalRound++;
       secretNum = Math.floor(Math.random() * 20 + 1);
-      console.log(secretNum);
+      //console.log(secretNum);
       guessCount = 0;
       inputEl.value = "";
       guessCountEl.textContent = "Guess: " + guessCount;
@@ -65,7 +65,7 @@ document.addEventListener("DOMContentLoaded", function () {
         totalCount++;
         guessCountEl.textContent = "Guess: " + guessCount;
         const averageGuess = totalCount / totalRound;
-        console.log(totalCount, "/", totalRound);
+        //console.log(totalCount, "/", totalRound);
         document.querySelector(
           ".avg-guess-player-name"
         ).textContent = "Average Guess: " + averageGuess.toFixed(2);
@@ -74,8 +74,8 @@ document.addEventListener("DOMContentLoaded", function () {
           msgEl.textContent = guess > secretNum ? "Too High" : "Too Low";
         } else {
           //success
-          if (totalRound === 1) {
-            console.log("CREATE?");
+          if (totalRound === 5) {
+            //console.log("CREATE?");
             msgEl.textContent = "Correct!";
             btnChckEl.innerText = "Go to Leaderboard";
           } else {

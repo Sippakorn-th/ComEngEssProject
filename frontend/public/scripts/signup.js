@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       getMembers()
         .then((members) => {
-          console.log(members);
+          //console.log(members);
           for (var i = 0; i < members.length; i++) {
             if (members[i].name === nameToAdd.value) {
               usernameIsTaken = true;
@@ -68,7 +68,7 @@ async function getAllMems() {
   try {
     const members = await getMembers();
     // Now you have access to the 'members' data, you can do something with it
-    console.log(members);
+    //console.log(members);
 
     // Add your code here to handle the members data, such as updating the UI
 

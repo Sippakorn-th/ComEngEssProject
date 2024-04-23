@@ -74,7 +74,7 @@ document.addEventListener("DOMContentLoaded", function () {
           msgEl.textContent = guess > secretNum ? "Too High" : "Too Low";
         } else {
           //success
-          if (totalRound === 1) {
+          if (totalRound === 5) {
             console.log("CREATE?");
             msgEl.textContent = "Correct!";
             btnChckEl.innerText = "Go to Leaderboard";

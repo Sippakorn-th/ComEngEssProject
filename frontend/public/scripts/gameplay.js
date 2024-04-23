@@ -27,7 +27,16 @@ document.addEventListener("DOMContentLoaded", function () {
   const outOfWordsEl = document.querySelector(".out-of-words");
   const nameInput = document.getElementById("playerName");
   let isAddName = false;
-  btnChckEl.addEventListener("click", () => {
+
+  btnChckEl.addEventListener("click", handleButtonClick);
+  inputEl.addEventListener("keydown", function (event) {
+    if (event.key === "Enter") {
+      event.preventDefault();
+      handleButtonClick();
+    }
+  });
+
+  function handleButtonClick() {
     if (btnChckEl.innerText === "Next Round") {
       //new round
       totalRound++;
@@ -87,5 +96,6 @@ document.addEventListener("DOMContentLoaded", function () {
         msgEl.textContent = "Please Enter the Number";
       }
     }
-  });
+  }
+
 });
